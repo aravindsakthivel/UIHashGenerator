@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@types/uuid": "9.0.1",
+    "@typescript-eslint/typescript-estree": "2.25.0",
+    "chart.js": "4.2.1",
+    "eslint": "6.8.0",
+    "reflect-metadata": "0.1.13",
+    "uuid": "9.0.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}

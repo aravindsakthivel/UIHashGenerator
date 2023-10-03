@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Example</title>
+    <style>
+      /* Inline styles for the table */
+      .styled-table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 2px solid #ddd;
+        margin-top: 20px;
+      }
+
+      .styled-table th,
+      .styled-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+
+      .styled-table th {
+        background-color: #f2f2f2;
+      }
+
+      .loading-spinner {
+        border: 4px solid rgba(0, 0, 0, 0.3);
+        border-top: 4px solid #007bff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 2s linear infinite;
+        display: inline-block;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Game generator</h1>
+    <div class="container">
+      <input
+        type="text"
+        class="input1"
+        type="number"
+        placeholder="no of hashes"
+      />
+      <input
+        type="text"
+        class="input2"
+        id="customHash"
+        type="string"
+        placeholder="server secret"
+      />
+      <input
+        type="text"
+        class="input3"
+        id="customHashClient"
+        type="string"
+        placeholder="client seed"
+      />
+      <button type="submit" id="generateAlgo">Generate</button>
+      <div class="task-container"></div>
+      <p></p>
+      <div id="initialHash">Inital Hash:</div>
+      <table id="valueTable" class="styled-table">
+        <thead>
+          <tr>
+            <th>Sl. No.</th>
+            <th>Constant</th>
+            <th>Client seed</th>
+            <th id="crashValTh">Value</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <div id="chartAppender"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/index.ts"></script>
+  </body>
+</html>
